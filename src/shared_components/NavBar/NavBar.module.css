@@ -13,22 +13,3 @@
   width: 60%;
   display: flex;
 }
-
-.cart_button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4em;
-  height: 2em;
-  border-radius: 0.25em;
-  background-color: #ccc;
-  text-transform: uppercase;
-}
-
-.cart_button:active {
-  background-color: #aaa;
-}
-
-.cart_button:hover {
-  background-color: #bbb;
-}

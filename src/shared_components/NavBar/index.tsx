@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Button from 'shared_components/Button';
 import styles from './NavBar.module.css';
 
 
@@ -17,9 +18,12 @@ const NavBar: React.FC<NavBarProps> = () => {
         </NavLink>
       </div>
       <NavLink to="/cart">
-        <div className={styles.cart_button}>
+        <Button style={{
+          height: "2.5em",
+          width: "5em",
+        }}>
           Cart
-        </div>
+        </Button>
       </NavLink>
     </div>
   )
