@@ -1,0 +1,21 @@
+.button_default_styles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4em;
+  height: 2em;
+  border: none;
+  border-radius: 0.25em;
+  outline: none;
+  cursor: pointer;
+  background-color: #ccc;
+  text-transform: uppercase;
+}
+
+.button_default_styles:active {
+  background-color: #aaa;
+}
+
+.button_default_styles:hover {
+  background-color: #bbb;
+}
