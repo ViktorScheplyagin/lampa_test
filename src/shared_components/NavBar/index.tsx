@@ -17,7 +17,9 @@ const NavBar: React.FC<NavBarProps> = () => {
         </NavLink>
       </div>
       <NavLink to="/cart">
-        <div className={styles.cart_button}>Cart</div>
+        <div className={styles.cart_button}>
+          Cart
+        </div>
       </NavLink>
     </div>
   )
