@@ -4,7 +4,15 @@ import { ProductPayload } from 'services/api/products/model';
 
 import styles from './ProductItem.module.css';
 
-const ProductItem: React.FC<{ product: ProductPayload }> = ({ product }) => {
+
+type ProductItemProps = {
+  product: ProductPayload;
+  onAddToCart: (product: ProductPayload) => void;
+}
+
+const ProductItem: React.FC<ProductItemProps> = ({ product, onAddToCart }) => {
+  const addProductToCartHandler = () => onAddToCart(product);
+
   return (
     <div className={styles.product_item_wrapper}>
       <Card>
@@ -17,7 +25,7 @@ const ProductItem: React.FC<{ product: ProductPayload }> = ({ product }) => {
           <p className={styles.description}>
             {product.description}
           </p>
-          <button className={styles.add_to_cart_btn}>
+          <button className={styles.add_to_cart_btn} onClick={addProductToCartHandler}>
             <span>Add to cart</span>
             <span>{`$${product.price}`}</span>
           </button>
