@@ -1,11 +1,18 @@
 import React, { CSSProperties } from 'react';
 import styles from './Button.module.css';
 
-const Button: React.FC<{ style?: CSSProperties }> = ({ children, style, ...props }) => {
+type ButtonProps = {
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+  style?: CSSProperties;
+  [key: string]: any;
+};
+
+const Button: React.FC<ButtonProps> = ({ onClick, style, children, ...props }) => {
   return (
     <button 
       className={styles.button_default_styles}
       style={{...style}}
+      onClick={onClick}
       {...props}
     >
       {children}
