@@ -6,11 +6,17 @@ import styles from './CartItem.module.css';
 
 
 type CartItemProps = {
-  product: ProductPayload;
+  increment: (product: ProductPayload) => void;
+  decrement: (product: ProductPayload) => void;
+  item: ProductPayload;
+  quantity: number;
 };
 
 
-const CartItem: React.FC<CartItemProps> = ({ product }) => {
+const CartItem: React.FC<CartItemProps> = ({ increment, decrement, item, quantity }) => {
+  const incrementQuantity = () => increment(item);
+  const decrementQuantity = () => decrement(item);
+
   return (
     <div className={styles.cart_item_wrapper}>
       <Card>
@@ -18,18 +24,18 @@ const CartItem: React.FC<CartItemProps> = ({ product }) => {
           <div className={styles.preview_image_wrapper}>
             <img
               className={styles.preview_image}
-              src={`${product.previewURL}/?text=${product.name}`}
+              src={`${item.previewURL}/?text=${item.name}`}
               alt="preview"
             />
           </div>
           <div className={styles.text_info_quantity_controls_container}>
             <p className={styles.description}>
-              {product.description}
+              {item.description}
             </p>
             <QuantityControl
-              onIncrement={e => alert("+")}
-              onDecrement={e => alert("-")}
-              value={1}
+              onIncrement={incrementQuantity}
+              onDecrement={decrementQuantity}
+              value={quantity}
             />
           </div>
         </div>
