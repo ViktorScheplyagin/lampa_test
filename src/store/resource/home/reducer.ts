@@ -1,22 +1,32 @@
-import { Action } from "redux";
-import { getProducts } from "services/api/products";
-import { ProductPayload } from "services/api/products/model";
-import { FETCH_NEW_PRODUCTS } from "store/resource/home/actions";
+import { Action } from 'redux';
+import { ProductPayload } from 'store/entities/model';
+import { FETCH_NEW_PRODUCTS, TOGGLE_IS_PRODUCTS_FETCHING } from 'store/resource/home/actions';
 
+type StateType = {
+  products: ProductPayload[];
+  isProductsFetching: boolean;
+  isProductsAddingToCart: boolean;
+};
 
-type StateType = { products: ProductPayload[]; };
+type ActionType = Action & { payload: any };
 
-type ActionType = Action & { payload: ProductPayload[]; };
-
-
-const initialState: StateType = { products: [] };
+const initialState: StateType = {
+  products: [],
+  isProductsFetching: false,
+  isProductsAddingToCart: false,
+};
 
 const homeReducer = (state = initialState, action: ActionType) => {
-  switch(action.type) {
+  switch (action.type) {
     case FETCH_NEW_PRODUCTS:
       return {
         ...state,
-        products: getProducts(),
+        products: action.payload,
+      };
+    case TOGGLE_IS_PRODUCTS_FETCHING:
+      return {
+        ...state,
+        isProductsFetching: action.payload,
       };
     default:
       return state;
