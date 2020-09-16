@@ -9,15 +9,15 @@ type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({ onClick, style, children, ...props }) => {
   return (
-    <button 
+    <button
       className={styles.button_default_styles}
-      style={{...style}}
+      style={{ ...style }}
       onClick={onClick}
       {...props}
     >
       {children}
     </button>
-  )
+  );
 };
 
 export default Button;
