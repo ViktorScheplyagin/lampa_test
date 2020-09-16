@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/lampa_test/static/css/main.5a56539f.chunk.css",
+    "main.js": "/lampa_test/static/js/main.ee000ffc.chunk.js",
+    "main.js.map": "/lampa_test/static/js/main.ee000ffc.chunk.js.map",
+    "runtime-main.js": "/lampa_test/static/js/runtime-main.0bf297b5.js",
+    "runtime-main.js.map": "/lampa_test/static/js/runtime-main.0bf297b5.js.map",
+    "static/js/2.98db5a43.chunk.js": "/lampa_test/static/js/2.98db5a43.chunk.js",
+    "static/js/2.98db5a43.chunk.js.map": "/lampa_test/static/js/2.98db5a43.chunk.js.map",
+    "index.html": "/lampa_test/index.html",
+    "precache-manifest.d3b11ab642525a206d7d0eb6fa289407.js": "/lampa_test/precache-manifest.d3b11ab642525a206d7d0eb6fa289407.js",
+    "service-worker.js": "/lampa_test/service-worker.js",
+    "static/css/main.5a56539f.chunk.css.map": "/lampa_test/static/css/main.5a56539f.chunk.css.map",
+    "static/js/2.98db5a43.chunk.js.LICENSE.txt": "/lampa_test/static/js/2.98db5a43.chunk.js.LICENSE.txt",
+    "static/media/spinner.svg": "/lampa_test/static/media/spinner.07073b21.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0bf297b5.js",
+    "static/js/2.98db5a43.chunk.js",
+    "static/css/main.5a56539f.chunk.css",
+    "static/js/main.ee000ffc.chunk.js"
+  ]
+}
