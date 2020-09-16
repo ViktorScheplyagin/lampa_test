@@ -10,12 +10,17 @@
 }
 
 .order_form_field {
-  margin-bottom: 1em;
+  outline: none;
   height: 2em;
 }
 
 .order_form_field::placeholder {
   text-transform: uppercase;
+}
+
+.order_form_field_error {
+  margin-bottom: 1em;
+  color: #f32;
 }
 
 @media (max-width: 768px) {
