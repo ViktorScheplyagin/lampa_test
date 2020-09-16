@@ -1,6 +1,6 @@
 {
   "homepage": "https://viktorscheplyagin.github.io/lampa_test/",
-  "name": "shop",
+  "name": "lampa_test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
