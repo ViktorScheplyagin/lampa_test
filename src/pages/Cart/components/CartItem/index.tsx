@@ -1,19 +1,24 @@
 import React from 'react';
 import Card from 'shared_components/Card';
-import { ProductPayload } from 'services/api/products/model';
+import { ProductPayload } from 'store/entities/model';
 import QuantityControl from './QuantityControls';
 import styles from './CartItem.module.css';
-
 
 type CartItemProps = {
   increment: (product: ProductPayload) => void;
   decrement: (product: ProductPayload) => void;
   item: ProductPayload;
   quantity: number;
+  isDisabled: boolean;
 };
 
-
-const CartItem: React.FC<CartItemProps> = ({ increment, decrement, item, quantity }) => {
+const CartItem: React.FC<CartItemProps> = ({
+  increment,
+  decrement,
+  item,
+  quantity,
+  isDisabled,
+}) => {
   const incrementQuantity = () => increment(item);
   const decrementQuantity = () => decrement(item);
 
@@ -30,9 +35,11 @@ const CartItem: React.FC<CartItemProps> = ({ increment, decrement, item, quantit
           </div>
           <div className={styles.text_info_quantity_controls_container}>
             <p className={styles.description}>
-              {item.description}
+              <span>{item.description}</span>
+              <span>Price: ${item.price}</span>
             </p>
             <QuantityControl
+              isDisabled={isDisabled}
               onIncrement={incrementQuantity}
               onDecrement={decrementQuantity}
               value={quantity}
@@ -41,7 +48,7 @@ const CartItem: React.FC<CartItemProps> = ({ increment, decrement, item, quantit
         </div>
       </Card>
     </div>
-  )
+  );
 };
 
 export default CartItem;

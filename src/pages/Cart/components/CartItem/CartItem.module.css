@@ -27,8 +27,15 @@
 }
 
 .description {
-  word-wrap: break-word;
   width: 18em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.description span {
+  word-wrap: break-word;
 }
 
 .text_info_quantity_controls_container {
