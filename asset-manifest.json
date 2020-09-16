@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/lampa_test/static/css/main.5a56539f.chunk.css",
-    "main.js": "/lampa_test/static/js/main.6648cb55.chunk.js",
-    "main.js.map": "/lampa_test/static/js/main.6648cb55.chunk.js.map",
+    "main.js": "/lampa_test/static/js/main.83467149.chunk.js",
+    "main.js.map": "/lampa_test/static/js/main.83467149.chunk.js.map",
     "runtime-main.js": "/lampa_test/static/js/runtime-main.a3f9292a.js",
     "runtime-main.js.map": "/lampa_test/static/js/runtime-main.a3f9292a.js.map",
     "static/js/2.93a49791.chunk.js": "/lampa_test/static/js/2.93a49791.chunk.js",
     "static/js/2.93a49791.chunk.js.map": "/lampa_test/static/js/2.93a49791.chunk.js.map",
     "index.html": "/lampa_test/index.html",
-    "precache-manifest.95d241f4ce81cfa74c6c69f7e2e51e0f.js": "/lampa_test/precache-manifest.95d241f4ce81cfa74c6c69f7e2e51e0f.js",
+    "precache-manifest.039c658a10bbeca34b03b58c6432fa03.js": "/lampa_test/precache-manifest.039c658a10bbeca34b03b58c6432fa03.js",
     "service-worker.js": "/lampa_test/service-worker.js",
     "static/css/main.5a56539f.chunk.css.map": "/lampa_test/static/css/main.5a56539f.chunk.css.map",
     "static/js/2.93a49791.chunk.js.LICENSE.txt": "/lampa_test/static/js/2.93a49791.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.a3f9292a.js",
     "static/js/2.93a49791.chunk.js",
     "static/css/main.5a56539f.chunk.css",
-    "static/js/main.6648cb55.chunk.js"
+    "static/js/main.83467149.chunk.js"
   ]
 }
