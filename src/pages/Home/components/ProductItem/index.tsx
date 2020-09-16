@@ -1,16 +1,16 @@
 import React from 'react';
 import Card from 'shared_components/Card';
-import { ProductPayload } from 'services/api/products/model';
+import { ProductPayload } from 'store/entities/model';
 
 import styles from './ProductItem.module.css';
 
-
 type ProductItemProps = {
   product: ProductPayload;
+  isDisabled: boolean;
   onAddToCart: (product: ProductPayload) => void;
-}
+};
 
-const ProductItem: React.FC<ProductItemProps> = ({ product, onAddToCart }) => {
+const ProductItem: React.FC<ProductItemProps> = ({ product, onAddToCart, isDisabled }) => {
   const addProductToCartHandler = () => onAddToCart(product);
 
   return (
@@ -22,17 +22,19 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, onAddToCart }) => {
           alt="item preview"
         />
         <div className={styles.text_info}>
-          <p className={styles.description}>
-            {product.description}
-          </p>
-          <button className={styles.add_to_cart_btn} onClick={addProductToCartHandler}>
+          <p className={styles.description}>{product.description}</p>
+          <button
+            className={styles.add_to_cart_btn}
+            disabled={isDisabled}
+            onClick={addProductToCartHandler}
+          >
             <span>Add to cart</span>
             <span>{`$${product.price}`}</span>
           </button>
         </div>
       </Card>
     </div>
-  )
+  );
 };
 
 export default ProductItem;
