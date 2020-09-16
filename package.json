@@ -32,7 +32,7 @@
     "build": "react-scripts build",
     "format": "prettier --write src",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build --repo https://github.com/ViktorScheplyagin/lampa_test.git",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
