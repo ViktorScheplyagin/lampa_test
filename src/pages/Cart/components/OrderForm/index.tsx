@@ -2,14 +2,25 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { required } from 'services/validation/common';
 import { lettersOnly, phoneNumber } from 'services/validation/orderForm';
-import Button from 'shared_components/Button';
+import { Button } from '@chakra-ui/core';
 import Card from 'shared_components/Card';
 
 import styles from './OrderForm.module.css';
 
-const renderField = ({ input, placeholder, type, className, meta: { touched, error } }) => (
+const renderField = ({
+  input,
+  placeholder,
+  type,
+  className,
+  meta: { touched, error },
+}) => (
   <>
-    <input className={className} placeholder={placeholder} type={type} {...input} />
+    <input
+      className={className}
+      placeholder={placeholder}
+      type={type}
+      {...input}
+    />
     <div className={styles.order_form_field_error}>
       {touched && error ? <span>{error}</span> : null}
     </div>
@@ -54,16 +65,7 @@ const OrderForm: React.FC<any> = (props) => {
             placeholder="phone"
             validate={[required, phoneNumber]}
           />
-          <Button
-            style={{
-              width: '100%',
-              fontSize: '1.3em',
-              fontWeight: 'bolder',
-              marginTop: '1em',
-            }}
-          >
-            Order
-          </Button>
+          <Button>Order</Button>
         </form>
       </Card>
     </div>

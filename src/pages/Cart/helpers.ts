@@ -7,7 +7,9 @@ type ItemsQuantities = {
   };
 };
 
-export const getItemsQuantities = (items: ProductPayload[]): ItemsQuantities => {
+export const getItemsQuantities = (
+  items: ProductPayload[],
+): ItemsQuantities => {
   const itemsQuantities: ItemsQuantities = {}; //TODO use Map here
 
   items.forEach((item) => {
@@ -24,9 +26,10 @@ export const getItemsQuantities = (items: ProductPayload[]): ItemsQuantities => 
   return itemsQuantities;
 };
 
-export const onOrderSubmitDecorator = (itemsAndQuantities: ItemsQuantities, submitCB: Function) => (
-  clientData,
-) => {
+export const onOrderSubmitDecorator = (
+  itemsAndQuantities: ItemsQuantities,
+  submitCB: Function,
+) => (clientData) => {
   const mapItemsAndQuantitiesToArray = () => {
     const itemsAndQuantitiesArr: any = [];
 
@@ -47,6 +50,7 @@ export const onOrderSubmitDecorator = (itemsAndQuantities: ItemsQuantities, subm
 
 export const calcTotalPrice = (items: ProductPayload[]) =>
   items?.reduce(
-    (totalPrice: number, currentItem: ProductPayload) => totalPrice + currentItem.price,
+    (totalPrice: number, currentItem: ProductPayload) =>
+      totalPrice + currentItem.price,
     0,
   );

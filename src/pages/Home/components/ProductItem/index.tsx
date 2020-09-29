@@ -10,7 +10,11 @@ type ProductItemProps = {
   onAddToCart: (product: ProductPayload) => void;
 };
 
-const ProductItem: React.FC<ProductItemProps> = ({ product, onAddToCart, isDisabled }) => {
+const ProductItem: React.FC<ProductItemProps> = ({
+  product,
+  onAddToCart,
+  isDisabled,
+}) => {
   const addProductToCartHandler = () => onAddToCart(product);
 
   return (

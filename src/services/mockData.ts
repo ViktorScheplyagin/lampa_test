@@ -5,7 +5,8 @@ const productsDB: ProductPayload[] = [
     id: '1',
     name: 'Lorem',
     previewURL: 'https://fakeimg.pl/300x250',
-    description: 'Laborum ea nisi deserunt non sunt dolor magna qui sunt dolore.',
+    description:
+      'Laborum ea nisi deserunt non sunt dolor magna qui sunt dolore.',
     price: 12,
   },
   {
@@ -41,7 +42,8 @@ const productsDB: ProductPayload[] = [
     id: '6',
     name: 'Nulla',
     previewURL: 'https://fakeimg.pl/300x250',
-    description: 'Cupidatat duis in proident irure sit aute consequat esse sunt consequat do.',
+    description:
+      'Cupidatat duis in proident irure sit aute consequat esse sunt consequat do.',
     price: 99,
   },
   {

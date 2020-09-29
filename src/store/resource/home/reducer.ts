@@ -1,6 +1,9 @@
 import { Action } from 'redux';
 import { ProductPayload } from 'store/entities/model';
-import { FETCH_NEW_PRODUCTS, TOGGLE_IS_PRODUCTS_FETCHING } from 'store/resource/home/actions';
+import {
+  FETCH_NEW_PRODUCTS,
+  TOGGLE_IS_PRODUCTS_FETCHING,
+} from 'store/resource/home/actions';
 
 type StateType = {
   products: ProductPayload[];
