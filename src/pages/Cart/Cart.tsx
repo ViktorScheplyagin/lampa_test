@@ -8,7 +8,11 @@ import styles from './Cart.module.css';
 import commonStyles from 'styles/common.module.css';
 import { FormSubmitHandler } from 'redux-form';
 import spinner from 'assets/spinner.svg';
-import { calcTotalPrice, getItemsQuantities, onOrderSubmitDecorator } from './helpers';
+import {
+  calcTotalPrice,
+  getItemsQuantities,
+  onOrderSubmitDecorator,
+} from './helpers';
 
 type CartProps = {
   itemsComponents: JSX.Element[];
@@ -52,7 +56,9 @@ const Cart: React.FC<CartProps> = ({
 
         <OrderForm onSubmit={onOrderSubmit} />
       </div>
-      {totalPrice && <div className={styles.cart_total_price}>Total: {`$${totalPrice}`}</div>}
+      {totalPrice && (
+        <div className={styles.cart_total_price}>Total: {`$${totalPrice}`}</div>
+      )}
     </div>
   </Layout>
 );
@@ -94,7 +100,9 @@ const CartContainer: React.FC<CartContainerProps> = ({
             increment={addItem}
             decrement={removeItem}
             quantity={quantity}
-            isDisabled={isProductAdding || isProductRemoving || isProductsFetching}
+            isDisabled={
+              isProductAdding || isProductRemoving || isProductsFetching
+            }
           />
         </div>,
       );
