@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/lampa_test/static/css/main.5a56539f.chunk.css",
-    "main.js": "/lampa_test/static/js/main.38ec88db.chunk.js",
-    "main.js.map": "/lampa_test/static/js/main.38ec88db.chunk.js.map",
-    "runtime-main.js": "/lampa_test/static/js/runtime-main.a3f9292a.js",
-    "runtime-main.js.map": "/lampa_test/static/js/runtime-main.a3f9292a.js.map",
-    "static/js/2.93a49791.chunk.js": "/lampa_test/static/js/2.93a49791.chunk.js",
-    "static/js/2.93a49791.chunk.js.map": "/lampa_test/static/js/2.93a49791.chunk.js.map",
-    "index.html": "/lampa_test/index.html",
-    "precache-manifest.56c6d4bec4d8e609fa4949a8e3235786.js": "/lampa_test/precache-manifest.56c6d4bec4d8e609fa4949a8e3235786.js",
-    "service-worker.js": "/lampa_test/service-worker.js",
-    "static/css/main.5a56539f.chunk.css.map": "/lampa_test/static/css/main.5a56539f.chunk.css.map",
-    "static/js/2.93a49791.chunk.js.LICENSE.txt": "/lampa_test/static/js/2.93a49791.chunk.js.LICENSE.txt",
-    "static/media/spinner.svg": "/lampa_test/static/media/spinner.07073b21.svg"
+    "main.css": "/shop/static/css/main.81faa153.chunk.css",
+    "main.js": "/shop/static/js/main.32e5edd7.chunk.js",
+    "main.js.map": "/shop/static/js/main.32e5edd7.chunk.js.map",
+    "runtime-main.js": "/shop/static/js/runtime-main.4a8e269c.js",
+    "runtime-main.js.map": "/shop/static/js/runtime-main.4a8e269c.js.map",
+    "static/js/2.caaa6dee.chunk.js": "/shop/static/js/2.caaa6dee.chunk.js",
+    "static/js/2.caaa6dee.chunk.js.map": "/shop/static/js/2.caaa6dee.chunk.js.map",
+    "index.html": "/shop/index.html",
+    "precache-manifest.48069dc2423bffbe0199f709f39a2a15.js": "/shop/precache-manifest.48069dc2423bffbe0199f709f39a2a15.js",
+    "service-worker.js": "/shop/service-worker.js",
+    "static/css/main.81faa153.chunk.css.map": "/shop/static/css/main.81faa153.chunk.css.map",
+    "static/js/2.caaa6dee.chunk.js.LICENSE.txt": "/shop/static/js/2.caaa6dee.chunk.js.LICENSE.txt",
+    "static/media/spinner.svg": "/shop/static/media/spinner.07073b21.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a3f9292a.js",
-    "static/js/2.93a49791.chunk.js",
-    "static/css/main.5a56539f.chunk.css",
-    "static/js/main.38ec88db.chunk.js"
+    "static/js/runtime-main.4a8e269c.js",
+    "static/js/2.caaa6dee.chunk.js",
+    "static/css/main.81faa153.chunk.css",
+    "static/js/main.32e5edd7.chunk.js"
   ]
 }
