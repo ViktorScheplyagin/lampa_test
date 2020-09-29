@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider as StoreProvider } from 'react-redux';
-import { ThemeProvider, CSSReset } from '@chakra-ui/core'
+import { ThemeProvider, CSSReset } from '@chakra-ui/core';
+import customTheme from 'styles/theme';
 import store from 'store';
 
 import Home from 'pages/Home';
@@ -18,7 +19,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={customTheme}>
       <CSSReset />
 
       <StoreProvider store={store}>
