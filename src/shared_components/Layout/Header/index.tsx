@@ -1,15 +1,11 @@
 import React from 'react';
-import NavBar from 'shared_components/NavBar';
-import styles from './Header.module.css';
+import Header from './Header';
 
-const Header: React.FC = () => {
+const HeaderContainer: React.FC = () => {
+  //TODO make header sticky if 5em scrolled down
   return (
-    <div className={styles.header}>
-      <div className={styles.header_content}>
-        <NavBar />
-      </div>
-    </div>
-  );
+    <Header theme="dark" />
+  )
 };
 
-export default Header;
+export default HeaderContainer;
