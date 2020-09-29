@@ -1,4 +1,0 @@
-.page_layout_content {
-  --navbar-height: 3.5em;
-  padding-top: calc(var(--navbar-height) + 2em);
-}
