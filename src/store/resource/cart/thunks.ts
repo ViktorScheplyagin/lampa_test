@@ -1,5 +1,10 @@
 import { OrderPayload, ProductPayload } from 'store/entities/model';
-import { deleteItemFromCart, getAllCartItems, postItemToCart, postOrder } from 'services/api';
+import {
+  deleteItemFromCart,
+  getAllCartItems,
+  postItemToCart,
+  postOrder,
+} from 'services/api';
 import {
   addProductToCartAC,
   fetchCartItemsAC,
@@ -28,14 +33,18 @@ export const fetchCartItemsTC = () => async (dispatch) => {
   dispatch(fetchCartItemsAC(cartItems));
 };
 
-export const addProductToCartTC = (product: ProductPayload) => async (dispatch) => {
+export const addProductToCartTC = (product: ProductPayload) => async (
+  dispatch,
+) => {
   dispatch(toggleIsProductAddingAC(true));
   await postItemToCart(product);
   dispatch(addProductToCartAC(product));
   dispatch(toggleIsProductAddingAC(false));
 };
 
-export const removeProductFromCartTC = (product: ProductPayload) => async (dispatch) => {
+export const removeProductFromCartTC = (product: ProductPayload) => async (
+  dispatch,
+) => {
   dispatch(toggleIsProductRemovingAC(true));
   await deleteItemFromCart(product.id);
   dispatch(removeProductFromCartAC(product));
