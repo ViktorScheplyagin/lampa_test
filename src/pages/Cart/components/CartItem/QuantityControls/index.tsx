@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from 'shared_components/Button';
+import { Button } from '@chakra-ui/core';
 import styles from './QuantityControls.module.css';
 
 type QuantityControlProps = {
@@ -23,11 +23,11 @@ const QuantityControl: React.FC<QuantityControlProps> = ({
 }) => {
   return (
     <div className={styles.quantity_control_container}>
-      <Button onClick={onIncrement} style={buttonStyle} disabled={isDisabled}>
+      <Button onClick={onIncrement} style={buttonStyle} isDisabled={isDisabled}>
         +
       </Button>
       <div>{value}</div>
-      <Button onClick={onDecrement} style={buttonStyle} disabled={isDisabled}>
+      <Button onClick={onDecrement} style={buttonStyle} isDisabled={isDisabled}>
         -
       </Button>
     </div>
