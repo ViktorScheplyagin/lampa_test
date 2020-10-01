@@ -23,7 +23,7 @@ const App: React.FC = () => {
       <CSSReset />
 
       <StoreProvider store={store}>
-        <BrowserRouter basename="/lampa_test/">
+        <BrowserRouter basename="/shop">
           <Switch>
             <Route exact path="/">
               <Home />
