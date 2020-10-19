@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider as StoreProvider } from 'react-redux';
 import { ThemeProvider, CSSReset } from '@chakra-ui/core';
@@ -7,16 +7,10 @@ import store from 'store';
 
 import Home from 'pages/Home';
 import Cart from 'pages/Cart';
-import mockData from 'services/mockData';
+import HouseAndHome from 'pages/HouseAndHome';
+import Women from 'pages/Women';
 
 const App: React.FC = () => {
-  useEffect(() => {
-    const allMockProductsJSON = localStorage.getItem('all');
-    const cartMockProductsJSON = localStorage.getItem('cart');
-
-    if (!allMockProductsJSON) localStorage.setItem('all', mockData);
-    if (!cartMockProductsJSON) localStorage.setItem('cart', JSON.stringify([]));
-  }, []);
 
   return (
     <ThemeProvider theme={customTheme}>
@@ -30,6 +24,12 @@ const App: React.FC = () => {
             </Route>
             <Route exact path="/cart">
               <Cart />
+            </Route>
+            <Route exact path="/house_and_home">
+              <HouseAndHome />
+            </Route>
+            <Route exact path="/women">
+              <Women />
             </Route>
           </Switch>
         </BrowserRouter>
