@@ -2,27 +2,25 @@ import React from 'react';
 import NavBar from 'shared_components/NavBar';
 import { Flex } from '@chakra-ui/core';
 import Logo from 'shared_components/Logo';
+import { NavLink } from 'react-router-dom';
 
-type HeaderType = {
-  theme: "dark" | "white",
-};
-
-const Header: React.FC<HeaderType> = ({ theme }) => {
-  const inversedTheme = theme === "dark" ? "white" : "dark";
-
+const Header: React.FC = () => {
   return (
     <Flex
       px={[0, 0, 0, 20]}
       justify="space-between"
-      pos="absolute" //TODO change position to fixed, if 5em scrolled down
+      pos="fixed"
       zIndex={1}
       w="100%"
-      //TODO background changing depending from the theme prop:
+      shadow="inset 0 40px 70px -60px black"
+      // TODO background changing depending from the theme prop:
       // "white": white background,
       // "dark": no background (transparent)
     >
-      <Logo theme={theme} />
-      <NavBar textColor={inversedTheme} />
+      <NavLink to="/">
+        <Logo size={{ x: "120px", y: "60px" }} />
+      </NavLink>
+      <NavBar />
     </Flex>
   );
 };

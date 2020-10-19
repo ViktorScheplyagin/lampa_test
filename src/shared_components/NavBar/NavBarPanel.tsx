@@ -1,13 +1,13 @@
 import React from 'react';
 import { Flex } from '@chakra-ui/core';
-import { NavLink } from 'react-router-dom';
 
-type NavBarProps = {
+type NavBarPanelProps = {
   textColor?: string;
   width?: string;
+  children: any[]
 };
 
-const NavBar: React.FC<NavBarProps> = ({ width, textColor }) => {
+const NavBarPanel: React.FC<NavBarPanelProps> = ({ width, textColor, children }) => {
   return (
     <Flex
       justify="space-between"
@@ -18,9 +18,9 @@ const NavBar: React.FC<NavBarProps> = ({ width, textColor }) => {
       boxSizing="border-box"
       color={textColor || "gray.900"}
     >
-      <NavLink to="/">Home</NavLink>
+      {children}
     </Flex>
   );
 };
 
-export default NavBar;
+export default NavBarPanel;

@@ -3,21 +3,21 @@ import { Box, Image } from '@chakra-ui/core';
 
 
 type LogoType = {
-  theme?: "dark" | "white",
-  size?: string;
+  size?: { x: string; y: string };
 };
 
-const logo = {
-  white: "https://smallimg.pngkey.com/png/small/11-112773_apple-logo-2014-png-apple-logo-in-white.png",
-  dark: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/863px-Apple_logo_black.svg.png"
-}
-
-const Logo: React.FC<LogoType> = ({ theme, size }) => {
+const Logo: React.FC<LogoType> = ({ size }) => {
   return (
-    <Box
-      w={size || "50px"}
+    <Box 
+      w={size?.x || "50px"}
+      h={size?.y || "50px"}
     >
-      <Image src={theme ? logo[theme] : logo.white} alt="logo" />
+      <Image
+        w="100%"
+        h="100%"
+        src='https://fakeimg.pl/120/bbbbbb'
+        alt="logo"
+      />
     </Box>
   )
 };
