@@ -1,6 +1,5 @@
-import Home from './Home';
+import Home from './HomeContainer';
 import { connect } from 'react-redux';
-
 import { AppStateType } from 'store';
 import { fetchProductsTC } from 'store/resource/home/thunks';
 import {
